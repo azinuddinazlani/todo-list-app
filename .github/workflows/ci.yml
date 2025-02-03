@@ -3,10 +3,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   backend:
@@ -30,6 +30,11 @@ jobs:
           cd backend
           pytest
 
+      - name: Build Docker image for backend
+        run: |
+          cd backend
+          docker build -t todo-backend .
+
   frontend:
     runs-on: ubuntu-latest
     steps:
@@ -50,3 +55,8 @@ jobs:
         run: |
           cd frontend
           npm run test:unit
+
+      - name: Build Docker image for frontend
+        run: |
+          cd frontend
+          docker build -t todo-frontend .
