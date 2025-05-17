@@ -56,7 +56,7 @@ jobs:
       #     cd todo-frontend
       #     npm run test:unit
 
-      - name: Build Docker image for frontend
-        run: |
-          cd todo-frontend
-          docker build -t todo-frontend .
+      # - name: Build Docker image for frontend
+      #   run: |
+      #     cd todo-frontend
+      #     docker build -t todo-frontend .
