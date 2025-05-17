@@ -2,6 +2,7 @@
 todo-backend/__pycache__/
 todo-backend/.env
 todo-backend/*.pyc
+todo-backend/venv/
 
 # Node.js
 todo-frontend/node_modules/

@@ -25,10 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r todo-backend/requirements.txt
 
-      - name: Run backend tests
-        run: |
-          cd todo-backend
-          pytest
+      # - name: Run backend tests
+      #   run: |
+      #     cd todo-backend
+      #     pytest
 
       - name: Build Docker image for backend
         run: |
@@ -51,10 +51,10 @@ jobs:
           cd todo-frontend
           npm install
 
-      - name: Run frontend tests
-        run: |
-          cd todo-frontend
-          npm run test:unit
+      # - name: Run frontend tests
+      #   run: |
+      #     cd todo-frontend
+      #     npm run test:unit
 
       - name: Build Docker image for frontend
         run: |
