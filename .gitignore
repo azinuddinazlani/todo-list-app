@@ -1,16 +1,8 @@
 # Python
-__pycache__/
-venv/
-.env
-*.pyc
+todo-backend/__pycache__/
+todo-backend/.env
+todo-backend/*.pyc
 
 # Node.js
-node_modules/
-dist/
-
-# Docker
-.dockerignore
-
-# IDE
-.vscode/
-.idea/
+todo-frontend/node_modules/
+todo-frontend/dist/
