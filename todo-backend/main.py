@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import os
@@ -33,7 +33,7 @@ def get_db_connection():
 
 # Pydantic model for tasks
 class Task(BaseModel):
-    task: str
+    task: str = Field(..., min_length=1)
     done: bool = False
 
 # Create table if it doesn't exist
